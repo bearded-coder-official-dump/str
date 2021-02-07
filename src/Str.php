@@ -12,4 +12,13 @@ class Str
             return $subject;
         }
     }
+
+    public static function afterLast($subject, $after)
+    {
+        if (strrpos($subject, $after) !== false) {
+            return substr($subject, strrpos($subject, $after) + strlen($after));
+        } else {
+            return $subject;
+        }
+    }
 }
